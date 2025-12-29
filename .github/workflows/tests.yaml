@@ -23,5 +23,5 @@ jobs:
       - name: Install Playwright
         run: npx playwright install
 
-      - name: Run Vitest tests
-        run: npm run test:unit
+      - name: Run tests
+        run: npm run test
