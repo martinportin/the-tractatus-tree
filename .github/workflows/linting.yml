@@ -1,4 +1,4 @@
-name: Code checks
+name: Code linting
 
 on:
   pull_request:
