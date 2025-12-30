@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest';
+import { describe, test, expect } from 'vitest';
 import { render } from 'vitest-browser-svelte';
 import Number from './Number.svelte';
 import { page } from 'vitest/browser';
