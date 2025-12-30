@@ -5,13 +5,13 @@ import { page } from 'vitest/browser';
 
 describe('number component', () => {
 	const numbers = ['1', '2', '3', '1.1', '2.5', '3.14', '4.3245', '10.123'];
-	const regexp = [/1/i, /2/i, /3/i, /1.1/i, /2.5/i, /3.14/i, /4.3245/i, /10.123/i];
+	const regexps = [/1/i, /2/i, /3/i, /1.1/i, /2.5/i, /3.14/i, /4.3245/i, /10.123/i];
 
 	for (const [index, value] of numbers.entries()) {
 		test(`should display ${value}`, () => {
 			render(Number, { number: value });
 
-			const number = page.getByText(regexp[index]);
+			const number = page.getByText(regexps[index]);
 			expect(number).toBeInTheDocument();
 		});
 	}
