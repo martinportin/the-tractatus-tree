@@ -1,11 +1,11 @@
 <script lang="ts">
 	interface Props {
-		number: string;
+		text: string;
 	}
 
-	let { number }: Props = $props();
+	let { text }: Props = $props();
 </script>
 
-<p>{number}</p>
+<p>{text}</p>
 
 <style></style>
