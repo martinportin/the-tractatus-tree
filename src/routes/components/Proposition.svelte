@@ -1,13 +1,27 @@
 <script lang="ts">
-	interface Props {
+	import Number from './Number.svelte';
+	import Self from './Proposition.svelte';
+	import Statement from './Statement.svelte';
+
+	interface Proposition {
 		number: string;
-		text: string;
+		statement: string;
+		propositions?: Proposition[];
+	}
+	interface Props {
+		proposition: Proposition;
 	}
 
-	const { number, text }: Props = $props();
+	const { proposition }: Props = $props();
 </script>
 
-<p>{number}</p>
-<p>{text}</p>
+<div>
+	<Number number={proposition.number} />
+	<Statement statement={proposition.statement} />
+
+	{#each proposition.propositions as subProposition (subProposition.number)}
+		<Self proposition={subProposition} />
+	{/each}
+</div>
 
 <style></style>
