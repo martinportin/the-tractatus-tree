@@ -19,7 +19,7 @@
 	<Number number={proposition.number} />
 	<Statement statement={proposition.statement} />
 
-	{#each proposition.propositions as subProposition}
+	{#each proposition.propositions as subProposition (subProposition.number)}
 		<Self proposition={subProposition} />
 	{/each}
 </div>
