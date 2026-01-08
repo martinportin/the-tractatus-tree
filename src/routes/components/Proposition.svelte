@@ -8,6 +8,7 @@
 		statement: string;
 		propositions?: Proposition[];
 	}
+
 	interface Props {
 		proposition: Proposition;
 	}
