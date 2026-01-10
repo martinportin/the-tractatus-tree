@@ -7,7 +7,7 @@
 </script>
 
 <div>
-	<!-- svelte-ignore svelte/no-at-html-tags -->
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	<p>{@html statement}</p>
 </div>
 
