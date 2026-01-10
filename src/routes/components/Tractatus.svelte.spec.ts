@@ -10,6 +10,8 @@ describe('tractatus component', () => {
 		propositions?: Proposition[];
 	}
 
+	const heading = 'heading';
+
 	test('should display header', () => {
 		const propositions: Proposition[] = [
 			{
@@ -17,9 +19,9 @@ describe('tractatus component', () => {
 				statement: 'text one'
 			}
 		];
-		render(Tractatus, { propositions });
+		render(Tractatus, { heading, propositions });
 
-		const header = page.getByRole('heading', { name: /tractatus logico-philosophicus/i });
+		const header = page.getByRole('heading', { name: /heading/i });
 		expect(header).toBeInTheDocument();
 	});
 
@@ -31,7 +33,7 @@ describe('tractatus component', () => {
 			}
 		];
 
-		render(Tractatus, { propositions });
+		render(Tractatus, { heading, propositions });
 
 		const number = page.getByText(/1/i);
 		expect(number).toBeInTheDocument();
@@ -46,7 +48,7 @@ describe('tractatus component', () => {
 			{ number: '2', statement: 'text two' }
 		];
 
-		render(Tractatus, { propositions });
+		render(Tractatus, { heading, propositions });
 
 		const numberOne = page.getByText(/1/i);
 		expect(numberOne).toBeInTheDocument();
@@ -71,7 +73,7 @@ describe('tractatus component', () => {
 			{ number: '2', statement: 'text two' }
 		];
 
-		render(Tractatus, { propositions });
+		render(Tractatus, { heading, propositions });
 
 		const numberOne = page.getByText(/1/i);
 		expect(numberOne).toBeInTheDocument();
@@ -106,7 +108,7 @@ describe('tractatus component', () => {
 			}
 		];
 
-		render(Tractatus, { propositions });
+		render(Tractatus, { heading, propositions });
 
 		const numberOne = page.getByText(/1/i);
 		expect(numberOne).toBeInTheDocument();
@@ -149,7 +151,7 @@ describe('tractatus component', () => {
 			}
 		];
 
-		render(Tractatus, { propositions });
+		render(Tractatus, { heading, propositions });
 
 		const numberOne = page.getByText(/1/i);
 		expect(numberOne).toBeInTheDocument();
