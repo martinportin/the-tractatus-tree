@@ -12,11 +12,6 @@
 	}
 
 	interface Data {
-		title: string;
-		author: string;
-		translator: string;
-		releaseDate: string;
-		source: string;
 		content: Content;
 	}
 
