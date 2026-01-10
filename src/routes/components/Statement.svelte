@@ -3,11 +3,12 @@
 		statement: string;
 	}
 
-	let { statement }: Props = $props();
+	const { statement }: Props = $props();
 </script>
 
 <div>
-	<p>{statement}</p>
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+	<p>{@html statement}</p>
 </div>
 
 <style></style>
