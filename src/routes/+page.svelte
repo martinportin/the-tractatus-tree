@@ -12,6 +12,7 @@
 	}
 
 	interface Data {
+		title: string;
 		content: Content;
 	}
 
@@ -22,6 +23,6 @@
 	const { data }: Props = $props();
 </script>
 
-<Tractatus propositions={data.content.propositions} />
+<Tractatus heading={data.title} propositions={data.content.propositions} />
 
 <style></style>

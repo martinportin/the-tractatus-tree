@@ -8,13 +8,14 @@
 	}
 
 	interface Props {
+		heading: string;
 		propositions: Proposition[];
 	}
 
-	const { propositions }: Props = $props();
+	const { heading, propositions }: Props = $props();
 </script>
 
-<h1>Tractatus logico-philosophicus</h1>
+<h1>{heading}</h1>
 
 {#each propositions as proposition (proposition.number)}
 	<Proposition {proposition} />
