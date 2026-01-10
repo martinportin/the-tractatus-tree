@@ -1,0 +1,162 @@
+{
+  "title": "Tractatus logico-philosophicus",
+  "author": "Ludvig Wittgenstein",
+  "translator": "C.K. Odgen",
+  "releaseDate": "October 22, 2010",
+  "source": "https://www.gutenberg.org/files/5740/5740-pdf.pdf",
+  "content": {
+    "propositions": [
+      {
+        "number": "1",
+        "statement": "The world is everything that is the case.*",
+        "propositions": [
+          {
+            "number": "1.1",
+            "statement": "The world is the totality of facts, not of things.",
+            "propositions": [
+              {
+                "number": "1.11",
+                "statement": "The world is determined by the facts, and by these being <em>all</em> the facts."
+              },
+              {
+                "number": "1.12",
+                "statement": "For the totality of facts determines both what is the case, and also all that is not the case."
+              },
+              {
+                "number": "1.13",
+                "statement": "The facts in logical space are the world."
+              }
+            ]
+          },
+          {
+            "number": "1.2",
+            "statement": "The world divides into facts.",
+            "propositions": [
+              {
+                "number": "1.21",
+                "statement": "Any one can either be the case or not be the case, and everything else remain the same."
+              }
+            ]
+          }
+        ],
+        "notes": ["*"]
+      },
+      {
+        "number": "2",
+        "statement": "What is the case, the fact, is the existence of atomic facts.",
+        "propositions": [
+          {
+            "number": "2.01",
+            "statement": "An atomic fact is a combination of objects (entities, things).",
+            "propositions": [
+              {
+                "number": "2.011",
+                "statement": "It is essential to a thing that it can be a constituent part of an atomic fact."
+              },
+              {
+                "number": "2.012",
+                "statement": "In logic nothing is accidental: if a thing <em>can</em> occur in an atomic fact the possibility of that atomic fact must already be prejudged in the thing.",
+                "propositions": [
+                  {
+                    "number": "2.0121",
+                    "statement": "It would, so to speak, appear as an accident, when to a thing that could exist alone on its own account, subsequently a state of affairs could be made to fit.  <br>If things can occur in atomic facts, this possibility must already lie in them.  <br>(A logical entity cannot be merely possible. Logic treats of every possibility, and all possibilities are its facts.)  <br>Just as we cannot think of spatial objects at all apart from space, or temporal objects apart from time, so we cannot think of <em>any</em> object apart from the possibility of its connexion with other things.  <br>If I can think of an object in the context of an atomic fact, I cannot think of it apart from the possibility of this context."
+                  },
+                  {
+                    "number": "2.0122",
+                    "statement": "The thing is independent, in so far as it can occur in all <em>possible</em> circumstances, but this form of independence is a form of connexion with the atomic fact, a form of dependence. (It is impossible for words to occur in two different ways, alone and in the proposition.)"
+                  },
+                  {
+                    "number": "2.0123",
+                    "statement": "If I know an object, then I also know all the possibilities of its occurrence in atomic facts.  <br>(Every such possibility must lie in the nature of the object.)  <br>A new possibility cannot subsequently be found.",
+                    "propositions": [
+                      {
+                        "number": "2.01231",
+                        "statement": "In order to know an object, I must know not its external but all its internal qualities."
+                      },
+                      {
+                        "number": "2.0124",
+                        "statement": "If all objects are given, then thereby are all <em>possible</em> atomic facts also given."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "number": "2.013",
+                "statement": "Every thing is, as it were, in a space of possible atomic facts. I can think of this space as empty, but not of the thing without the space.",
+                "propositions": [
+                  {
+                    "number": "2.0131",
+                    "statement": "A spatial object must lie in infnite space. (A point in space is a place for an argument.)  <br>A speck in a visual field need not be red, but it must have a colour; it has, so to speak, a colour space round it. A tone must have <em>a</em> pitch, the object of the sense of touch <em>a</em> hardness, etc."
+                  }
+                ]
+              },
+              {
+                "number": "2.014",
+                "statement": "Objects contain the possibility of all states of affairs.",
+                "propositions": [
+                  {
+                    "number": "2.0141",
+                    "statement": "The possibility of its occurrence in atomic facts is the form of the object."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "number": "2.02",
+            "statement": "The object is simple.",
+            "propositions": [
+              {
+                "number": "2.0201",
+                "statement": "Every statement about complexes can be analysed into a statement about their constituent parts, and into those propositions which completely describe the complexes."
+              },
+              {
+                "number": "2.021",
+                "statement": "Objects form the substance of the world. Therefore they cannot be compound.",
+                "propositions": [
+                  {
+                    "number": "2.0211",
+                    "statement": "If the world had no substance, then whether a proposition had sense would depend on whether another proposition was true."
+                  },
+                  {
+                    "number": "2.0212",
+                    "statement": "It would then be impossible to form a picture of the world (true or false)."
+                  }
+                ]
+              },
+              {
+                "number": "2.022",
+                "statement": "It is clear that however different from the real one an imagined world may be, it must have something&mdash;a form&mdash;in common with the real world."
+              },
+              {
+                "number": "2.023",
+                "statement": "This fixed form consists of the objects.",
+                "propositions": [
+                  {
+                    "number": "2.0231",
+                    "statement": "The substance of the world <em>can</em> only determine a form and not any material properties. For these are first presented by the propositions&mdash;first formed by the configuration of the objects."
+                  },
+                  {
+                    "number": "2.0232",
+                    "statement": "Roughly speaking: objects are colourless."
+                  },
+                  {
+                    "number": "2.0233",
+                    "statement": "Two objects of the same logical form are&mdash;apart from their external properties&mdash;only differentiated from one another in that they are different."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "number": "*",
+        "note": "The decimal figures as numbers of the separate propositions indicate the logical importance of the propositions, the emphasis laid upon them in my exposition. The propositions n.1, n.2, n.3, etc., are comments on proposition No. n; the propositions n.m1, n.m2, etc., are comments on the proposition No. n.m; and so on."
+      }
+    ]
+  }
+}
