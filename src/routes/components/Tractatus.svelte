@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Heading from './Heading.svelte';
 	import Proposition from './Proposition.svelte';
 
 	interface Proposition {
@@ -15,7 +16,7 @@
 	const { heading, propositions }: Props = $props();
 </script>
 
-<h1>{heading}</h1>
+<Heading text={heading} />
 
 {#each propositions as proposition (proposition.number)}
 	<Proposition {proposition} />
