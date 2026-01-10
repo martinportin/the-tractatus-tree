@@ -7,6 +7,7 @@
 </script>
 
 <div>
+	<!-- svelte-ignore svelte/no-at-html-tags -->
 	<p>{@html statement}</p>
 </div>
 
