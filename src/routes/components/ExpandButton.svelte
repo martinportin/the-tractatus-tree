@@ -1,13 +1,13 @@
 <script lang="ts">
-	export const expandButtonState = $state({ isPressed: false });
-
-	function handleClick() {
-		expandButtonState.isPressed = !expandButtonState.isPressed;
+	interface Props {
+		isExpanded: boolean;
+		handleClick: () => void;
 	}
+	let { isExpanded, handleClick }: Props = $props();
 </script>
 
 <div>
-	<button onclick={handleClick}>{expandButtonState.isPressed ? 'Collapse' : 'Expand'}</button>
+	<button onclick={handleClick}>{isExpanded ? 'Collapse' : 'Expand'}</button>
 </div>
 
 <style></style>
