@@ -156,4 +156,17 @@ describe('proposition component', () => {
 		expect(numberFour).not.toBeInTheDocument();
 		expect(textFour).not.toBeInTheDocument();
 	});
+
+	test('should contain expand button', () => {
+		const proposition = {
+			number: '1',
+			statement: 'text one',
+			propositions: [{ number: '2', statement: 'text two' }]
+		};
+
+		render(Proposition, { proposition });
+
+		const expandButton = page.getByRole('button', { name: 'Expand' });
+		expect(expandButton).toBeInTheDocument();
+	});
 });
