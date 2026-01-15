@@ -14,10 +14,6 @@
 		proposition: Proposition;
 	}
 
-	interface State {
-		isExpanded: boolean;
-	}
-
 	const { proposition }: Props = $props();
 
 	let isExpanded: boolean = $state(false);
