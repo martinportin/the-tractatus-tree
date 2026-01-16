@@ -12,9 +12,10 @@
 
 	interface Props {
 		proposition: Proposition;
+		isVisible?: boolean;
 	}
 
-	const { proposition }: Props = $props();
+	const { proposition, isVisible = true }: Props = $props();
 
 	let isExpanded: boolean = $state(false);
 
@@ -23,7 +24,7 @@
 	}
 </script>
 
-<div>
+<div class={isVisible ? 'visible' : 'nonVisible'}>
 	<Number number={proposition.number} />
 	<Statement statement={proposition.statement} />
 
@@ -32,8 +33,16 @@
 	{/if}
 
 	{#each proposition.propositions as subProposition (subProposition.number)}
-		<Self proposition={subProposition} />
+		<Self proposition={subProposition} isVisible={isExpanded} />
 	{/each}
 </div>
 
-<style></style>
+<style>
+	.visible {
+		display: block;
+	}
+
+	.nonVisible {
+		display: none;
+	}
+</style>

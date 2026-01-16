@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 import { render } from 'vitest-browser-svelte';
 import Proposition from './Proposition.svelte';
-import { page } from 'vitest/browser';
+import { page, userEvent } from 'vitest/browser';
 
 describe('proposition component', () => {
 	test('should display "1" and "text one"', () => {
@@ -168,5 +168,58 @@ describe('proposition component', () => {
 
 		const expandButton = page.getByRole('button', { name: 'Expand' });
 		expect(expandButton).toBeInTheDocument();
+	});
+
+	test('should expand when pressing the expand button', async () => {
+		const proposition = {
+			number: '1',
+			statement: 'text one',
+			propositions: [{ number: '2', statement: 'text two' }]
+		};
+
+		render(Proposition, { proposition, isVisible: true });
+
+		const subpropositionNumber = page.getByText(/2/i);
+		const subpropositionText = page.getByText(/text two/i);
+
+		expect(subpropositionNumber).not.toBeVisible();
+		expect(subpropositionText).not.toBeVisible();
+
+		const expandButton = page.getByRole('button', { name: /expand/i });
+
+		await userEvent.click(expandButton);
+
+		expect(subpropositionNumber).toBeVisible();
+		expect(subpropositionText).toBeVisible();
+	});
+
+	test('should toggle the subproposition visibility when pressing the expand/collapse button', async () => {
+		const proposition = {
+			number: '1',
+			statement: 'text one',
+			propositions: [{ number: '2', statement: 'text two' }]
+		};
+
+		render(Proposition, { proposition, isVisible: true });
+
+		const subpropositionNumber = page.getByText(/2/i);
+		const subpropositionText = page.getByText(/text two/i);
+
+		expect(subpropositionNumber).not.toBeVisible();
+		expect(subpropositionText).not.toBeVisible();
+
+		const expandButton = page.getByRole('button', { name: /expand/i });
+
+		await userEvent.click(expandButton);
+
+		expect(subpropositionNumber).toBeVisible();
+		expect(subpropositionText).toBeVisible();
+
+		const collapseButton = page.getByRole('button', { name: /collapse/i });
+
+		await userEvent.click(collapseButton);
+
+		expect(subpropositionNumber).not.toBeVisible();
+		expect(subpropositionText).not.toBeVisible();
 	});
 });
