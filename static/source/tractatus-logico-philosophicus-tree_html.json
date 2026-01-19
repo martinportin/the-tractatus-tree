@@ -143,7 +143,13 @@
                   },
                   {
                     "number": "2.0233",
-                    "statement": "Two objects of the same logical form are&mdash;apart from their external properties&mdash;only differentiated from one another in that they are different."
+                    "statement": "Two objects of the same logical form are&mdash;apart from their external properties&mdash;only differentiated from one another in that they are different.",
+                    "propositions": [
+                      {
+                        "number": "2.02331",
+                        "statement": "Either a thing has properties which no other has, and then one can distinguish it straight away from the others by a description and refer to it; or, on the other hand, there are several things which have the totality of their properties in common, and then it is quite impossible to point to any one of them. <br>For if a thing is not distinguished by anything, I cannot distinguish it&mdash;for otherwise it would be distinguished."
+                      }
+                    ]
                   }
                 ]
               }
