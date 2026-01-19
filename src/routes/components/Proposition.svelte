@@ -17,14 +17,14 @@
 
 	const { proposition, isVisible = true }: Props = $props();
 
-	let isExpanded: boolean = $state(false);
+	let isExpanded: boolean = $derived(!isVisible);
 
 	function handleExpansion(): void {
 		isExpanded = !isExpanded;
 	}
 </script>
 
-<div class={isVisible ? 'visible' : 'nonVisible'}>
+<div class={isVisible ? 'visible' : 'invisible'}>
 	<Number number={proposition.number} />
 	<Statement statement={proposition.statement} />
 
@@ -42,7 +42,7 @@
 		display: block;
 	}
 
-	.nonVisible {
+	.invisible {
 		display: none;
 	}
 </style>

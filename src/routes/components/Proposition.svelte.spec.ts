@@ -200,7 +200,7 @@ describe('proposition component', () => {
 			propositions: [{ number: '2', statement: 'text two' }]
 		};
 
-		render(Proposition, { proposition, isVisible: true });
+		render(Proposition, { proposition });
 
 		const subpropositionNumber = page.getByText(/2/i);
 		const subpropositionText = page.getByText(/text two/i);
@@ -221,5 +221,61 @@ describe('proposition component', () => {
 
 		expect(subpropositionNumber).not.toBeVisible();
 		expect(subpropositionText).not.toBeVisible();
+	});
+
+	test('should collapse subproposition if proposition is collapsed', async () => {
+		const proposition = {
+			number: '1',
+			statement: 'text one',
+			propositions: [
+				{
+					number: '2',
+					statement: 'text two',
+					propositions: [{ number: '3', statement: 'text three' }]
+				}
+			]
+		};
+
+		render(Proposition, { proposition });
+
+		const expandPropositionButton = page.getByRole('button', { name: /Expand/i });
+
+		await userEvent.click(expandPropositionButton);
+
+		const subpropositionNumber = page.getByText(/2/i);
+		const subpropositionText = page.getByText(/text two/i);
+		const expandSubPropositionButton = page.getByRole('button', { name: /Expand/i }).last();
+
+		expect(subpropositionNumber).toBeVisible();
+		expect(subpropositionText).toBeVisible();
+
+		const subSubPropositionNumber = page.getByText(/3/i);
+		const subSubPropositionText = page.getByText(/text three/i);
+
+		expect(subSubPropositionNumber).not.toBeVisible();
+		expect(subSubPropositionText).not.toBeVisible();
+
+		await userEvent.click(expandSubPropositionButton);
+
+		expect(subSubPropositionNumber).toBeVisible();
+		expect(subSubPropositionText).toBeVisible();
+
+		const collapsePropositionButton = page.getByRole('button', { name: /collapse/i }).first();
+
+		await userEvent.click(collapsePropositionButton);
+
+		expect(subpropositionNumber).not.toBeVisible();
+		expect(subpropositionText).not.toBeVisible();
+
+		expect(subSubPropositionNumber).not.toBeVisible();
+		expect(subSubPropositionText).not.toBeVisible();
+
+		await userEvent.click(expandPropositionButton);
+
+		expect(subpropositionNumber).toBeVisible();
+		expect(subpropositionText).toBeVisible();
+
+		expect(subSubPropositionNumber).not.toBeVisible();
+		expect(subSubPropositionText).not.toBeVisible();
 	});
 });
